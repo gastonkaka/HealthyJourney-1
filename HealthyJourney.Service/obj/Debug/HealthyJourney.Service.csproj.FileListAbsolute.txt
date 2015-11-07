@@ -1,0 +1,14 @@
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Service.dll.config
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Service.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Service.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\EntityFramework.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Data.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Domain.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Data.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\HealthyJourney.Domain.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\EntityFramework.xml
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\obj\Debug\HealthyJourney.Service.csprojResolveAssemblyReference.cache
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\obj\Debug\HealthyJourney.Service.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Service\obj\Debug\HealthyJourney.Service.pdb
