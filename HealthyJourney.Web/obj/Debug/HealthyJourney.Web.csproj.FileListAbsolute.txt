@@ -67,3 +67,9 @@ C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourn
 C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\obj\Debug\HealthyJourney.Web.csprojResolveAssemblyReference.cache
 C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\obj\Debug\HealthyJourney.Web.dll
 C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\obj\Debug\HealthyJourney.Web.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Data.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Service.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Domain.dll
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Data.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Service.pdb
+C:\Users\thaer\Documents\Visual Studio 2015\Projects\HealthyJourney\HealthyJourney.Web\bin\HealthyJourney.Domain.pdb

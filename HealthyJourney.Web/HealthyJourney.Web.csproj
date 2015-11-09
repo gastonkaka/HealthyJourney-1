@@ -189,15 +189,23 @@
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\color-blue.css" />
     <Content Include="Content\flexslider.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\layerslider.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.css" />
     <Content Include="Content\owl.transitions.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Accordion\jquery-ui-tabs-rotate.js" />
+    <Content Include="Scripts\Accordion\jquery.ui.accordion.min.js" />
+    <Content Include="Scripts\Accordion\jquery.ui.core.min.js" />
+    <Content Include="Scripts\Accordion\jquery.ui.tabs.min.js" />
+    <Content Include="Scripts\Accordion\jquery.ui.widget.min.js" />
     <Content Include="Scripts\AdminLTE\plugins\iCheck\square\_all.css" />
     <Content Include="Scripts\AdminLTE\plugins\input-mask\jquery.inputmask.date.extensions.js" />
     <Content Include="Scripts\AdminLTE\plugins\input-mask\jquery.inputmask.extensions.js" />
@@ -236,6 +244,8 @@
     <Content Include="Scripts\isotope.pkgd.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="Scripts\layerslider.transitions.js" />
     <Content Include="Scripts\owl.carousel.min.js" />
     <Content Include="Scripts\wow.min.js" />
     <Content Include="Web.config" />
@@ -294,6 +304,19 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Services\Details.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthyJourney.Data\HealthyJourney.Data.csproj">
+      <Project>{64a7b44c-47ae-43a5-9207-91ee4a7bbae2}</Project>
+      <Name>HealthyJourney.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthyJourney.Service\HealthyJourney.Service.csproj">
+      <Project>{54977f92-a99d-4200-8ba2-6c9f8c5bc842}</Project>
+      <Name>HealthyJourney.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

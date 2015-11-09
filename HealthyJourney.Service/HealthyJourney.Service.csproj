@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="IClientServices.cs" />
+    <Compile Include="ClientServices.cs" />
+    <Compile Include="ServiceProviderServices.cs" />
+    <Compile Include="IServiceProviderServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

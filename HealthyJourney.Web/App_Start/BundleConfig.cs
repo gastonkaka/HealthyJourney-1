@@ -24,8 +24,11 @@ namespace HealthyJourney.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css", 
+                      "~/Content/bootstrap.css",
                       "~/Content/owl.carousel.css",
+                      "~/Content/color-blue.css",
+                      "~/Content/styles.css",
+                      "~/Content/layerslider.css",
                       "~/Content/owl.theme.css",
                       "~/Content/owl.transitions.css",
                        "~/Content/animate.css",
@@ -36,11 +39,23 @@ namespace HealthyJourney.Web
             bundles.Add(new ScriptBundle("~/bundles/owl").Include(
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/owl.carousel.min.js",
+                      "~/Scripts/wow.min.js",
                       "~/Scripts/isotope.pkgd.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/accordion").Include(
+          "~/Scripts/Accordion/jquery.ui.accordion.min.js",
+          "~/Scripts/Accordion/jquery.ui.core.min.js",
+          "~/Scripts/Accordion/jquery.ui.widget.min.js",
+          "~/Scripts/Accordion/jquery.ui.tabs.min.js",
+          "~/Scripts/Accordion/jquery-ui-tabs-rotate.js"));
+
 
             bundles.Add(new ScriptBundle("~/bundles/gmaps").Include(
                         "~/Scripts/gmaps.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/layerslider").Include(
+                       "~/Scripts/layerslider.kreaturamedia.jquery.js",
+                       "~/Scripts/layerslider.transitions.js"));
         }
     }
 }

@@ -10,11 +10,18 @@ namespace HealthyJourney.Data.Infrastructure
 {
 	public interface IUnitOfWork : IDisposable
 	{
-		void Commit(); 
+		void Commit();
         //void Rollback();
-		IUserRepository UserRepository { get; }
+        IClientRepository ClientRepository { get; }
+
+        IUserRepository UserRepository { get; }
+
+        IServiceProviderRepository ServiceProviderRepository { get; }
+
         IBadgeRepository BadgeRepository { get; }
+
         ISpecialityRepository SpecialityRepository { get; }
+
         IMedicalRecordRepository MedicalRecordRepository { get; }
 	}
 

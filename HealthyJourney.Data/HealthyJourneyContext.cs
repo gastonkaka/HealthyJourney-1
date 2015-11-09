@@ -23,7 +23,7 @@ namespace HealthyJourney.Data
 
         public DbSet<Badge> Badges { get; set; }
         public DbSet<MedicalRecord> MedicalRecords { get; set; }
-        public DbSet<Badge> Specialities { get; set; }
+        public DbSet<Speciality> Specialities { get; set; }
         public DbSet<MedicalCenterMetadata> MedicalCenterMetadatas { get; set; }
         public DbSet<ServiceProviderBadge> ServiceProviderBadges { get; set; }
 
