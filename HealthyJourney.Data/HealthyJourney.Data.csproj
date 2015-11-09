@@ -59,13 +59,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201510211927289_config3.cs" />
-    <Compile Include="Migrations\201510211927289_config3.Designer.cs">
-      <DependentUpon>201510211927289_config3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511091457079_V4.cs" />
-    <Compile Include="Migrations\201511091457079_V4.Designer.cs">
-      <DependentUpon>201511091457079_V4.cs</DependentUpon>
+    <Compile Include="Migrations\201511091530075_V1.cs" />
+    <Compile Include="Migrations\201511091530075_V1.Designer.cs">
+      <DependentUpon>201511091530075_V1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,11 +83,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510211927289_config3.resx">
-      <DependentUpon>201510211927289_config3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511091457079_V4.resx">
-      <DependentUpon>201511091457079_V4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511091530075_V1.resx">
+      <DependentUpon>201511091530075_V1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

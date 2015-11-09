@@ -8,7 +8,8 @@ namespace HealthyJourney.Domain.Entities
 {
     public class Doctor : ServiceProvider
     {
-       
+        virtual public IEnumerable<Consultation> Consultations { get; set; }
+
 
     }
 }

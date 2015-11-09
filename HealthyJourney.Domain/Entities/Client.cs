@@ -25,6 +25,11 @@ namespace HealthyJourney.Domain.Entities
         public string Currency { get; set; }
 
         virtual public IEnumerable<MedicalRecord> MedicalRecords { get; set; }
+        virtual public IEnumerable<Comment> Comments { get; set; }
+        virtual public IEnumerable<Consultation> Consultations { get; set; }
+        virtual public IEnumerable<Facture> Factures { get; set; }
+
+        virtual public IEnumerable<FeedBack> FeedBacks { get; set; }
 
     }
 }
