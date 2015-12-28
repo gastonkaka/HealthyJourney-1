@@ -10,11 +10,14 @@ namespace HealthyJourney.Domain.Entities
 {
     public class Comment
     {
-        [Key, Column(Order = 0)]
-        public int ClientId { get; set; }
-        [Key , Column(Order = 1)]
-        public int ForumId { get; set; }
-        virtual public Client Client { get; set; }
+        
+        [Key]
+        public int CommentId { get; set; }
+
+        public string Content { get; set; }
+        public string Files { get; set; }
+        public DateTime DateCreation { get; set; }
+        virtual public User User { get; set; }
         virtual public Forum Forum { get; set; }
     }
 }

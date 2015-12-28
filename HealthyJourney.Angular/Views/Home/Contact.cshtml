@@ -1,0 +1,118 @@
+﻿@model HealthyJourney.Angular.Models.EmailFormModel
+@{
+    ViewBag.Title = "Contact";
+}
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+</head>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="map-canvas" class="google-map"></div>
+
+                <div class="quick-contact">
+                    <h3>Quick Contact</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <i class="fa fa-home"></i>
+                                <span>Full Address:</span>
+                               Esprit, La petite ariana , Chotrana , Ariana
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <i class="fa fa-phone"></i>
+                                <span>Cell No:</span>
+                                +216 52094747
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <i class="fa fa-fax"></i>
+                                <span>Fax No:</span>
+                                +216 52094747
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <i class="fa fa-ambulance"></i>
+                                <span>Ambulance:</span>
+                                + 000 987654321
+                            </p>
+                        </div>
+                        <address>
+                            <strong>Support:</strong>   <a href="mailto:Support@example.com">healthyjourney@gmail.com</a>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="appointment">
+
+                    <div class="header text-center">
+                        <h2>Make an Appointment</h2>
+                        <a href="#" class="number">
+                            <i class="fa fa-phone fa-fw"></i>
+                            1-234-567-890
+                        </a>
+                        <span class="or">OR</span>
+                    </div>
+                    <!-- form of appointment -->
+                    <div class="row">
+                        <form method="post" action="#">
+                            <div class="form">
+
+                                <div class="input-group margin-bottom-sm col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                    <input class="form-control" type="text" placeholder="Email Address *" required>
+                                </div>
+                                <div class="input-group margin-bottom-sm col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                    <input class="form-control" type="text" placeholder="Appointment Date *" required>
+                                </div>
+                            </div>
+                            <div class="input-group margin-bottom-sm col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                <textarea class="form-control" rows="6" placeholder="Your Problem *" required></textarea>
+                            </div>
+                            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+                                <input class="btn btn-primary send" type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end of form -->
+                </div><!-- end of appointment-->
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script>  function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var myLatlng = new google.maps.LatLng(36.8992536, 10.1891971);
+      var mapOptions = {
+          zoom: 12,
+          center: myLatlng
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Healthy Journey HQ'
+      });
+  }
+	      google.maps.event.addDomListener(window, 'load', initialize);
+	    </script>
+
+<script>
+      		new WOW().init();
+</script>
+}

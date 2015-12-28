@@ -1,0 +1,77 @@
+﻿@model IEnumerable<HealthyJourney.Domain.Entities.Forum>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<section class="blog-content" style="background-image:url(../../Content/img/texture.png);background-repeat:repeat">
+    <div class="container">
+        <div class="row">
+            <main class="blog1col col-md-9">
+                <div class="archive">
+                    <br />
+                    <div class="right btn btn-twitter col-md-offset-5"><p>
+    @Html.ActionLink("Create New", "Create")
+</p></div>
+                   <br />
+                    @foreach (var item in Model)
+                    {
+                        <article class="row">
+
+                            <div class="col-md-4 col-sm-4">
+                                <img src="~/Content/Uploads/@Html.DisplayFor(modelItem => item.Files)" class="img-responsive center-block img-padder" alt="Medical Theme Health and Care">
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <h4>
+                                    <a href="#">
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </a>
+                                </h4>
+                                <ul class="list-inline info">
+                                    <li><i class="fa fa-user-md"></i>@Html.DisplayFor(modelItem => item.User.Email)</li>
+                                    <li><i class="fa fa-calendar"></i>@Html.DisplayFor(modelItem => item.DateCreation)</li>
+                                </ul>
+
+                                <p>
+                                    @Html.DisplayFor(modelItem => item.Content)
+                                    <a href="@Url.Action("Details", "Forum", new { id = item.ForumId }) " class="service-rm-btn btn btn-primary">
+                                        Continue reading <i class="fa fa-caret-right"></i>
+                                    </a>
+                                </p>
+
+
+                            </div>
+                        </article>
+
+                    }
+        </div>
+                </main>
+            <aside class="col-md-3 ">
+                <br /><br />
+                <div class="widget widget_categories" id="categories-3">
+                    <h4><span>Specialities</span></h4>
+                    <ul>
+                        @foreach (var spe in ViewBag.Specialities)
+                        {
+                            <li class="cat-item cat-item-4">
+                                <a href="#" title="View all posts filed under Data">@Html.DisplayFor(modelItem => spe)</a>
+                            </li>
+                        }
+                        
+                       
+                    </ul>
+                </div>
+                <div class="widget widget_text" id="text-3">
+                    <h4>
+                        <span>Healthy Journey</span>
+                    </h4>
+                    <div class="textwidget">
+        Lets have a great Journey
+                                        </div>
+                </div>
+               
+            </aside>
+                </div>
+        </div>
+    </section>
+

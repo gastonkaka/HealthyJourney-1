@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Healthy Journey</title>
+     <base href="/">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body data-ng-app="main">
+    
+    <div>
+        @RenderPage("menu.cshtml",null)
+
+    </div>
+   
+    <div class="" style="min-height: 520px">
+        <div class="" style="height: 65px"></div>
+            @RenderBody()
+
+
+        </div>
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <ul class="text-center contact">
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Share in Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Share in Twitter" class="twitter"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Share in Google +" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Share in Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Share in Pinterest" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li class="socials-icons">
+                            <a href="#" data-toggle="tooltip" title="Connect with Skype" class="skype"><i class="fa fa-skype"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copy-right-text text-center">
+                     <p> &copy; @DateTime.Now.Year </p><a>Healthy Journey</a>  
+                                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+            window.MyApp = {};
+    </script>
+    <script src="~/App/Validator.js"></script>
+    <script src="~/App/App.js"></script>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+            MyApp.rootPath = '@Url.Content("~")';
+            @RenderSection("jsCode", required: false)
+    </script>
+
+
+
+   
+</body>
+</html>

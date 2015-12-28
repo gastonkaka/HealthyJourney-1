@@ -41,25 +41,30 @@ namespace HealthyJourney.Data.Infrastructure
         }
 
 
-        private ServiceProviderRepository serviceProviderRepository;
-        public IServiceProviderRepository ServiceProviderRepository
-        {
-            get
-            {
-                return serviceProviderRepository = new ServiceProviderRepository(dbFactory);
-            }
-        }
 
+        
         private UserRepository userRepository;
          public IUserRepository UserRepository
         {
             get { return userRepository = new UserRepository(dbFactory); }
         }
 
-        private ClientRepository clientRepository;
-        public IClientRepository ClientRepository
+        private InfosRepository infosRepository;
+        public IInfosRepository InfosRepository
         {
-            get { return clientRepository = new ClientRepository(dbFactory); }
+            get { return infosRepository = new InfosRepository(dbFactory); }
+        }
+
+        private ICommentRepository commentRepository;
+        public ICommentRepository CommentRepository
+        {
+            get { return commentRepository = new CommentRepository(dbFactory); }
+        }
+
+        private IForumRepository forumRepository;
+        public IForumRepository ForumRepository
+        {
+            get { return forumRepository = new ForumRepository(dbFactory); }
         }
 
 

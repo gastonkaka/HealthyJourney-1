@@ -10,6 +10,7 @@ namespace HealthyJourney.Domain.Entities
     public class Badge
     {
 
+        [Key]
         public int Id { get; set; }
         public string Label { get; set; }
         public DateTime DateCreation { get; set; }

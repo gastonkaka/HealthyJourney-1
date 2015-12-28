@@ -12,23 +12,23 @@ namespace HealthyJourney.Data.Configurations
     {
         public UserConfiguration()
         {
-             Map<Admin>(b => b.ToTable("Admins"));
-             Map<Consultant>(b => b.ToTable("Consultants"));
-             Map<Client>(b => b.ToTable("Clients"));
-            Map<MedicalCenter>(b => b.ToTable("MedicalCenters"));
-            Map<Insurance>(b => b.ToTable("Insurances"));
-            Map<Doctor>(b => b.ToTable("Doctors"));
+             //Map<User>(b => b.ToTable("Users"));
+            // Map<Consultant>(b => b.ToTable("Consultants"));
+            // Map<Client>(b => b.ToTable("Clients"));
+            //Map<MedicalCenter>(b => b.ToTable("MedicalCenters"));
+            //Map<Insurance>(b => b.ToTable("Insurances"));
+            //Map<Doctor>(b => b.ToTable("Doctors"));
 
 
 
 
-            Property(u => u.UserName)
-                .HasColumnName("username")
-                .HasMaxLength(8)
-                .IsRequired();
+            //Property(u => u.UserName)
+            //    .HasColumnName("username")
+            //    .HasMaxLength(8)
+            //    .IsRequired();
 
-            Property(u => u.Email).IsRequired();
-            Property(u => u.Password).HasMaxLength(8).IsRequired();
+            //Property(u => u.Email).IsRequired();
+            //Property(u => u.Password).HasMaxLength(8).IsRequired();
 
 
         }

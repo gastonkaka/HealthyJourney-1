@@ -1,0 +1,83 @@
+﻿<section id="starting">
+    <div class="starting-wrapper" style="background-image:url(../../../Content/img/doctors-img.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="team-button">
+             
+                    <div class="col-md-12">
+                        <h1 class="sub-title wow animated flipInX" data-wow-delay="3s">Meet Our Partners ,<br/> they are all aroud tunisia<br/> and Believe us you can count on them</h1>
+                    </div>
+                </div>
+            </div>
+            <div style="height:100px"></div>
+            <div class="row">
+                <div class="input-group margin-bottom-sm col-md-4">
+                    <input class="form-control" type="text" placeholder="Search by povider *" data-ng-model="query">
+                </div>
+                <div class="input-group margin-bottom-sm col-md-4">
+                    <input class="form-control" type="text" placeholder="Search by adress *" data-ng-model="query2">
+                </div>
+                <div class="input-group margin-bottom-sm col-md-4">
+                    <input class="form-control" type="text" placeholder="Search by speciality *" data-ng-model="query3">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="container">
+       
+        <div class="col-lg-4 col-sm-6 col-xs-12"  ng-repeat="info in infos | filter:query| filter:query2| filter:query3" ng-click="showInfos(info)">
+            <div class="doctor-meta">
+                <div class="doctor-img">
+                    <img class="img-responsive center-block" src="../../../Content/Uploads/{{info.Thumbnail}}" alt="">
+                </div>
+                <div class="doctor-info">
+                    <div class="row">
+                        <div class="doctor-name text-center">
+                            {{info.FirstName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div ng-show="info.IsFull == 0" class="doctor-name text-center" style="background-color:azure">
+                           Doctor
+                        </div>
+                        <div ng-show="info.IsFull == 1" class="doctor-name text-center"  style="background-color:azure">
+                            Medical Center
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="position text-center">
+                          <h1 ng-repeat="info.s in info.Specialities">{{info.s.Label}}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="doctor-des text-center">
+                            <i>{{info.City}} - {{info.Adress}} - {{info.Postal}}</i>
+                            <p>{{info.Description}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="doctor-social text-center">
+                            <ul class="contact">
+                                <li class="online-contact">
+                                    <a href="#" data-toggle="tooltip" title="Share in Facebook"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li class="online-contact">
+                                    <a href="#" data-toggle="tooltip" title="Connect with Skype"><i class="fa fa-skype"></i></a>
+                                </li>
+                                <li class="online-contact">
+                                    <a href="#" data-toggle="tooltip" title="Share in Google +"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+
+

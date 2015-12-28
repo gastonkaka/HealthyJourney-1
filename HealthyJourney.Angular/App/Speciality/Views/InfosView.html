@@ -1,0 +1,23 @@
+﻿<h3>Infos List</h3>
+<div class="col-md-4">
+    <button  ng-click="refreshInfos(infos.UserId)"><span class="fa fa-refresh"></span></button>
+   
+</div>
+
+<section class="featured-service-content">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-sm-4 service"  ng-bind="{{infos.UserId}}">
+               
+
+                <div class="row text-center">
+                    <div class="about-service">
+                        <h3 class="text-center" ng-bind="infos.UserId"></h3>
+                    </div>
+                </div>
+
+            </div>	<!-- col-sm-4 -->
+        </div>
+    </div>
+</section>

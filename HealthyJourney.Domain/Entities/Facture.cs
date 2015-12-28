@@ -15,6 +15,6 @@ namespace HealthyJourney.Domain.Entities
         [Key, Column(Order = 1)]
         public int FormularId { get; set; }
         virtual public Formular Formular { get; set; }
-        virtual public Client Client { get; set; }
+        virtual public User User { get; set; }
     }
 }

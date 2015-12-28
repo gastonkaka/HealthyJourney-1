@@ -1,0 +1,61 @@
+﻿<h3>Speciality Details</h3>
+<div ng-show="flags.shownFromList == true">Came from Speciality list</div>
+<div ng-show="flags.shownFromList == false">Came from direct edit</div>
+<div>
+    <a href="#" ng-click="refreshSpeciality(specialityService)"><span class="fa fa-refresh"></span></a>
+</div>
+<div>
+    <section class="gallery-title text-center">
+
+        <div class="">
+            <div class="le_container">
+                    <div class=" card-1" style="background-color:#2a4852;opacity:0.6">
+                        <div class="row">
+                            <div>
+                                <h5 class="headline" ng-model="specialityService.Label">{{specialityService.Label}}</h5>
+                                <p class="headline"></p>
+                                <div class="service-icon text-center">
+                                    <a href="#2">  <i class="fa fa-{{specialityService.ImgPath}} fa-5x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="sub-headline">
+                                <p ng-bind="specialityService.Description"></p>
+                            </div>
+                        </div>
+                        <div class="row col-md-offset-5">
+                            <div class="sub-headline">
+                                <button type="button" class="btn-twitter" ng-click="showSpecialityInfos(specialityService.Id)"><i class="fa fa-plus"></i> See providers</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                </div>
+            </div>
+            
+       
+        
+    </section>
+
+    <div class="container" ng-show="providers.length() !== 0" >
+        <div class="col-md-12">
+
+            <div class="col-md-5 col-md-offset-1 card card-1 " style="background-color:#2a4852;opacity:0.8" ng-repeat="p in providers">
+                <div class="" style="padding:20px" ng-click="showInfos(p.InfosId)">
+
+                    <div><img class="thumbnail" src="../../../Content/img/slider1.jpg" /></div>
+                    <div class="row text-center">
+                        <div class="about-service">
+                            <h3 class="text-center" ng-bind="p.InfosId"></h3>
+                        </div>
+                    </div>
+
+                </div>	<!-- col-sm-4 -->
+                   
+            </div>
+           
+        </div>
+    </div>
+    <div style="min-height:100px"></div>
+</div>

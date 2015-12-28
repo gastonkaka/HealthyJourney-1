@@ -1,0 +1,32 @@
+﻿
+
+<section class="le_container">
+    <div class=" card-1" style="background-color:#2a4852;opacity:0.8">
+        <div class="col-md-offset-1">
+            <a href="#" ng-click="refreshSpecialities()"><span class="fa fa-refresh"></span></a>
+        </div>
+        <div class="container">
+           
+            <div class="row">
+
+                <div class="col-sm-4 service" ng-repeat="speciality in specialities">
+                    <div class="row text-center">
+                        <div class="service-icon text-center">
+                            <a ng-click="showSpeciality(speciality)"> <i class="fa fa-{{speciality.ImgPath}} fa-5x"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="about-service">
+                            <h3 class="text-center" ng-bind="speciality.Label"></h3>
+                            <p class="text-center" ng-bind="speciality.Description"></p>
+                        </div>
+                    </div>
+
+                </div>	<!-- col-sm-4 -->
+            </div>
+        </div>
+        </div>
+</section>
+<div class="margin_top5"></div>
+<br /><br /><br />

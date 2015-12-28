@@ -1,0 +1,66 @@
+﻿@model HealthyJourney.Domain.Entities.Forum
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<section class="blog-content">
+    <div class="container">
+        <div class="row">
+            <main class="blog1col col-md-9">
+                <div class="archive">
+
+                    <article class="row">
+
+                        <div class="col-md-4 col-sm-4">
+                            <img src="~/Content/Uploads/@Html.DisplayFor(model => model.Files)" class="img-responsive center-block img-padder" alt="Medical Theme Health and Care">
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <h4>
+                                <a href="#">
+                                    @Html.DisplayFor(model => model.Title)
+                                </a>
+                            </h4>
+                            <ul class="list-inline info">
+                                <li><i class="fa fa-user-md"></i>@Html.DisplayFor(model => model.User.Email)</li>
+                                <li><i class="fa fa-calendar"></i>@Html.DisplayFor(model => model.DateCreation)</li>
+                            </ul>
+
+                            <p>
+                                @Html.DisplayFor(model => model.Content)
+
+                            </p>
+
+
+                        </div>
+                    </article>
+
+
+                </div>
+            </main>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+            <div id="disqus_thread"></div>
+            <script>
+var disqus_config = function () {
+    this.page.url = "https://localhost:44300/Forum/Detail"+model.Title;
+this.page.identifier = PAGE_IDENTIFIER;
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//healthyjourneyy.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </div>
+
+    </div>
+</section>
+
+

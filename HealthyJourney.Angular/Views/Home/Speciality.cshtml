@@ -1,0 +1,192 @@
+
+@{
+    ViewBag.Title = "Speciality";
+}
+
+@section scripts {
+    <script src="~/App/Speciality/App.js"></script>
+    <script src="~/App/Speciality/ViewModels/RootViewModel.js"></script>
+    <script src="~/App/Speciality/ViewModels/SpecialityHomeViewModel.js"></script>
+    <script src="~/App/Speciality/ViewModels/SpecialityListViewModel.js"></script>
+    <script src="~/App/Speciality/ViewModels/SpecialityViewModel.js"></script>
+    <script src="~/App/Speciality/ViewModels/InfosViewModel.js"></script>
+
+}
+@section jsCode {
+            angular.bootstrap(document.getElementById("speciality"), ['speciality']);
+
+}
+
+<div ng-non-bindable>
+    <div id="speciality" data-ng-controller="rootViewModel" style="background-image:url(../../Content/img/background-image.jpg)">
+        <div class="row card-1" style="background-color:#2a4852;opacity:0.8">
+            <h2 ng-bind="pageHeading"></h2>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-1 col-xs-2">
+                    <button class="btn btn-twitter btn-circle btn-lg" ng-click="viewModelHelper.refreshPage('speciality')"><i class="fa fa-home"></i></button>
+                </div>
+                <div class="col-md-1 col-xs-2">
+                    <button class="btn btn-twitter btn-circle btn-lg" ng-click="specialityList()"><i class="fa fa-list"></i></button>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xs-6">
+                        <button class="btn btn-twitter  btn-circle btn-lg" ng-click="showSpeciality()"><i class="fa fa-play"></i></button>
+
+                    </div>
+                    <div class="col-md-6  col-xs-6">
+                        <input type="text" id="spe" ng-model="specialityService.Id" />
+                    </div>
+
+
+                </div>
+
+            </div>
+            </div>
+            <hr />
+            <div ng-view></div>
+            <hr />
+    @if (Request.IsAuthenticated)
+    {
+        <section id="testimonial" style="background-image:url(../../Content/img/doctors-img.jpg)" class="text-center">
+            <div class="" style="background-color:#2a4852;opacity:0.8">
+                <div class="container ">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="appointment card-1 " style="margin:50px">
+
+                            <div class="header text-center">
+                                <h2>Make an Appointment</h2>
+                                <a href="#" class="number">
+                                    <i class="fa fa-phone fa-fw"></i>
+                                    +216-55-123-456
+                                </a>
+                                <span class="or">OR</span>
+                            </div>
+                            <!-- form of appointment -->
+                            <div>
+                                @RenderPage("Email.cshtml", null)
+
+                            </div>
+                            </div>
+                            <!-- end of form -->
+                        </div><!-- end of appointment-->
+                    </div>
+                </div>
+          
+        </section>
+    }
+    @if (Request.IsAuthenticated == false)
+    {
+        <section id="testimonial" class="text-center">
+            <div class="" style="background-color:#2a4852;opacity:0.8">
+                <div class="container">
+                    <div class="row client-content text-center">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <h1>Testimonial</h1>
+                            </div>
+                            <div class="row">
+                                <div class="sub-headline">
+                                    <p>What Our Patients Say About Us</p>
+                                </div>
+                            </div>
+
+                            <div id="carousel-example-generic" class="carousel slide card-1 jumbotron" style="background-color:#000000" data-ride="carousel">
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div id="client-speech">
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-left"></i>
+                                                    </div>
+                                                    <div class="col-md-8 col-md-offset-2">
+                                                        <p class="client-comment text-center">
+                                                            When you form a team, why do you try to form a team? Because teamwork builds trust and trust builds speed.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                                        <img class="img-circle img-responsive center-block" src="/Content/img/client3.jpg" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="row text-center">
+                                                    <p class="client-name text-center">Julia Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div id="client-speech">
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-left"></i>
+                                                    </div>
+                                                    <div class="col-md-8 col-md-offset-2">
+                                                        <p class="client-comment text-center">
+                                                            When you form a team, why do you try to form a team? Because teamwork builds trust and trust builds speed.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                                        <img class="img-circle img-responsive center-block" src="/Content/img/client1.jpg" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="row text-center">
+                                                    <p class="client-name text-center">John Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div id="client-speech">
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-left"></i>
+                                                    </div>
+                                                    <div class="col-md-8 col-md-offset-2">
+                                                        <p class="client-comment text-center">
+                                                            When you form a team, why do you try to form a team? Because teamwork builds trust and trust builds speed.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <i class="fa fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                                        <img class="img-circle img-responsive center-block" src="Content/img/client4.jpg" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="row text-center">
+                                                    <p class="client-name text-center">Jane Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <i class="fa fa-angle-left fa-3x"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <i class="fa fa-angle-right fa-3x"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div> <!--  client-content  -->
+                </div>
+            </div>
+        </section>	<!-- testimonial -->
+    }
+
+        </div>
+</div>
+

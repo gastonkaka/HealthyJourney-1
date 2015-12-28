@@ -10,11 +10,19 @@ namespace HealthyJourney.Domain.Entities
 {
     public class Consultation
     {
+
+        [Display(Name = "creation date")] //lors de la generation du formulaire par l' ASP
+        [DataType(DataType.DateTime)]
+        public DateTime DateCreation { get; set; }
+
         [Key, Column(Order = 0)]
         public int ClientId { get; set; }
+
         [Key, Column(Order = 1)]
         public int DoctorId { get; set; }
-        virtual public Client Client { get; set; }
-        virtual public Doctor Doctor { get; set; }
+
+        virtual public User Client { get; set; }
+
+        virtual public User Doctor { get; set; }
     }
 }

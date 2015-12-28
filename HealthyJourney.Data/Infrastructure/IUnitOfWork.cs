@@ -12,17 +12,19 @@ namespace HealthyJourney.Data.Infrastructure
 	{
 		void Commit();
         //void Rollback();
-        IClientRepository ClientRepository { get; }
 
         IUserRepository UserRepository { get; }
+        IInfosRepository InfosRepository { get; }
 
-        IServiceProviderRepository ServiceProviderRepository { get; }
 
         IBadgeRepository BadgeRepository { get; }
 
         ISpecialityRepository SpecialityRepository { get; }
 
         IMedicalRecordRepository MedicalRecordRepository { get; }
-	}
+        IForumRepository ForumRepository { get; }
+        ICommentRepository CommentRepository { get; }
+
+    }
 
 }
